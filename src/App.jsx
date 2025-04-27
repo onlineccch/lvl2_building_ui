@@ -1,31 +1,19 @@
-import "./App.css";
-import styles from "./App.module.css";
-import styled from "styled-components";
-
-// start here
-const Title = styled.h1`
-  color: tomato;
-  font-size: 2rem;
-  text-align: center;
-`; // end here
+import { Button as MuiButton } from "@mui/material";
+import { Button as ChaButton } from "@chakra-ui/react";
 
 function App() {
   return (
-    <>
-      {/* 1. Regular CSS */}
-      <span>1. Regular CSS</span>
-      <h1 className="title">Hello, world!</h1>
-      <br />
-      <hr />
-      {/* 2. CSS Modules */}
-      <span>2. CSS Modules</span>
-      <h1 className={styles.title}>Hello, CSS Modules!</h1>
-      <br />
-      <hr />
-      {/* 3. Styled-Components */}
-      <span>3. Styled-Components</span>
-      <Title>Hello, Styled-Components!</Title>
-    </>
+    <div className="flex flex-col gap-2 justify-center items-center h-lvh">
+      <ChaButton variant="outline" colorPalette="teal">
+        Click Chakra
+      </ChaButton>
+      <MuiButton variant="contained" color="primary">
+        Click Mui
+      </MuiButton>
+      <button className="bg-blue-500 hover:bg-blue-700 cursor-pointer text-white font-bold py-2 px-4 rounded">
+        Click Tailwind
+      </button>
+    </div>
   );
 }
 
