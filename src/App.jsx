@@ -1,11 +1,9 @@
-import MyList from "./components/mylist";
-import Mylist2 from "./components/mylist2";
+import SimpleForm from "./components/simpleform";
 
 function App() {
   return (
     <>
-      <MyList />
-      <Mylist2 />
+      <SimpleForm />
     </>
   );
 }
